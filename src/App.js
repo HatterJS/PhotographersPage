@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import PhotoItem from './components/PhotoItem';
+import SelfInformation from './components/SelfInformation';
+import imageSrc01 from './img/pictures/img_01.jpg';
+import imageSrc02 from './img/pictures/img_02.jpg';
+import imageSrc03 from './img/pictures/img_03.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
       </header>
+      <body>
+        <SelfInformation />
+        <div className='galleryBlock'>
+          <PhotoItem itemsImageSrc={imageSrc01} itemsTitle='Carpathians' itemsDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repudiandae neque dicta repellendus reiciendis magni vitae animi, asperiores doloremque illo ullam, sunt odit assumenda! Hic eveniet nemo iste numquam odit!' />
+          <PhotoItem itemsImageSrc={imageSrc02} itemsTitle='Bear' itemsDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repudiandae neque dicta repellendus reiciendis magni vitae animi, asperiores doloremque illo ullam, sunt odit assumenda! Hic eveniet nemo iste numquam odit!' />
+          <PhotoItem itemsImageSrc={imageSrc03} itemsTitle='Lake' itemsDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores repudiandae neque dicta repellendus reiciendis magni vitae animi, asperiores doloremque illo ullam, sunt odit assumenda! Hic eveniet nemo iste numquam odit!' />
+          <PhotoItem />
+          <PhotoItem />
+        </div>
+      </body>
     </div>
   );
 }

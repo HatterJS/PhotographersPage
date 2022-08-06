@@ -1,0 +1,53 @@
+.photoItem {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 210px;
+    flex-grow: 1;
+    margin: 10px;
+}
+.photoItem__Content {
+    position: relative;
+    border: 3px solid white;
+    border-radius: 20px 20px 0px 0px;
+    background: grey no-repeat left/250%;
+    height: 200px;
+    overflow: hidden;
+}
+.photoItem__Description {
+    background-color: white;
+    max-height: 50px;
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
+    border: 3px solid white;
+    padding: 0px 10px;
+    /* line-height: 1; */
+}
+.photoItem__darkShade, .photoItem__lightShade {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 60%;    
+    border-radius: 20px 20px 0px 0px;
+}
+.photoItem__darkShade {
+    background-color: rgb(0, 0, 0);
+}
+.photoItem__lightShade {
+    background-color: rgb(255, 255, 255);
+}
+.photoItem:hover .photoItem__darkShade {
+    animation: shadeMoover 0.5s ease-in-out forwards;
+}
+.photoItem:hover .photoItem__lightShade {
+    animation: shadeMoover 0.5s ease-in-out 0.1s forwards;
+}
+@keyframes shadeMoover {
+    0%{
+        opacity: 60%;
+    }
+    100%{
+        width: 0%;
+        opacity: 10%;
+    }
+}
