@@ -2,11 +2,19 @@ import React from "react";
 import '../css/photoItem.css';
 
 class PhotoItem extends React.Component {
+    handleUnfold = (e) => {
+        const photoItems = document.querySelectorAll('.photoItem');
+        for (let i=0; i<photoItems.length; i++) {
+            photoItems[i].classList.remove('active');
+        }
+        e.currentTarget.classList.add('active');
+        console.log(e.currentTarget.classList);
+        console.log(photoItems);
+    }
     render () {
         return (
-            <div className="photoItem">
+            <div className="photoItem" onClick={this.handleUnfold}>
                 <div className="photoItem__Content" style={{backgroundImage: `url(${this.props.itemsImageSrc})`}}>
-                    {/* <img className="photoItem__picture" src={this.props.itemsImageSrc} alt="Sorry!"></img> */}
                     <div className="photoItem__lightShade"></div>
                     <div className="photoItem__darkShade"></div>
                 </div>
@@ -14,9 +22,7 @@ class PhotoItem extends React.Component {
                     <header>
                         <h3>{this.props.itemsTitle || 'no Title'}</h3>
                     </header>
-                    <article>
-                        {/* <p>{this.props.itemsDescription || 'no Content'}</p> */}
-                    </article>
+                    <p style={{color: 'black'}}>{this.props.itemsDescription || 'no Content'}</p>
                 </div>
             </div>
         );

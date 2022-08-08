@@ -1,14 +1,22 @@
-p {
-  text-align: center;
-}
-
 body {
   max-width: 980px;
   margin: 0 auto;
+}
+
+nav {
+  margin: 10px;
 }
 
 .galleryBlock {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;    
+}
+
+.mailLink {
+  color: yellow;
+}
+.mailLink:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }

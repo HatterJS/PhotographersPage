@@ -1,3 +1,21 @@
 .selfInformation {
-    height: 300px;
+    display: flex;
+    margin: 10px;
+}
+.avatarImage {
+    border-radius: 50%;
+    border: 3px solid white;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+}
+.avatarImage-sign {
+    text-align: center;
+}
+
+.selfInformation__description {
+    margin: 0 20px;
+}
+.selfInformation__statistics {
+    text-align: end;
 }
