@@ -9,7 +9,7 @@ class SelfInformation extends React.Component {
                 <div className='selfInformation__avatar'>
                     <figure>
                         <img className="avatarImage" src={avatar} alt='missed'></img>
-                        <figcaption><h4 className="avatarImage-sign">Mr.Hatter</h4></figcaption>
+                        {/* <figcaption><h4 className="avatarImage-sign">Mr.Hatter</h4></figcaption> */}
                     </figure>
                 </div>
                 <div className='selfInformation__description'>

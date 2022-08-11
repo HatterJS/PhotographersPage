@@ -1,4 +1,4 @@
-h3 {
+.photoItem__text {
     color: black;
 }
 
@@ -14,7 +14,6 @@ h3 {
 .photoItem__Content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: relative;
     border: 3px solid white;
     border-radius: 20px 20px 0px 0px;
@@ -27,10 +26,16 @@ h3 {
     background-size: 150%;
     background-position: center;
 }
-.photoItem__rightArea, .photoItem__leftArea{
+.photoItem__midArea {
+    display: none;
+    height: 100%;
+    flex-grow: 1;
+}
+.photoItem__rightArea, .photoItem__leftArea {
     display: none;
     align-self: stretch;
     align-items: center;
+    z-index: 1;
 }
 .photoItem__rightArea:hover {
     background-color: rgba(255, 255, 255, 0.3);
@@ -112,6 +117,9 @@ h3 {
     display: flex;
 }
 .active .photoItem__leftArea {
+    display: flex;
+}
+.active .photoItem__midArea {
     display: flex;
 }
 .active .photoItem__Description {

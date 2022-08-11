@@ -14,6 +14,10 @@ class PhotoItem extends React.Component {
                 photoItems[i].classList.remove('active');
             }
             e.currentTarget.previousSibling.classList.add('active');
+        } else if (e.target.classList.contains('photoItem__midArea')) {   
+            for (let i=0; i<photoItems.length; i++) {
+                photoItems[i].classList.remove('active');
+            }
         } else {   
             for (let i=0; i<photoItems.length; i++) {
                 photoItems[i].classList.remove('active');
@@ -27,15 +31,16 @@ class PhotoItem extends React.Component {
             <div className="photoItem" onClick={this.handleUnfold}>
                 <div className="photoItem__Content" style={{backgroundImage: `url(${this.props.itemsImageSrc})`}}>
                     <div className="photoItem__leftArea"><div className="photoItem__leftArrow"></div></div>
+                    <div className="photoItem__midArea"></div>
                     <div className="photoItem__rightArea"><div className="photoItem__rightArrow"></div></div>
                     <div className="photoItem__lightShade"></div>
                     <div className="photoItem__darkShade"></div>
                 </div>
                 <div className="photoItem__Description">
                     <header>
-                        <h3>{this.props.itemsTitle || 'no Title'}</h3>
+                        <h3 className="photoItem__text">{this.props.itemsTitle || 'no Title'}</h3>
                     </header>
-                    <p style={{color: 'black'}}>{this.props.itemsDescription || 'no Content'}</p>
+                    <p  className="photoItem__text">{this.props.itemsDescription || 'no Content'}</p>
                 </div>
             </div>
         );
