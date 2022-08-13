@@ -4,10 +4,20 @@ import icoFb from '../img/ico/fb.gif';
 import icoInstagram from '../img/ico/insta.gif';
 
 const sortMenu = ['Date', 'Name', 'Rating'];
-const filterMenu = ['Lendscape', 'Macro', 'Animals', 'Motion'];
+const filterMenu = ['Shaw all', 'Lendscape', 'Macro', 'Animals', 'Motion'];
 
 function handleNavigation(e) {
-    console.log(e.target.firstChild.textContent);
+    const photoItem = document.querySelectorAll('.photoItem');
+    const currentMenuItem = e.target.firstChild.textContent.toLowerCase();
+    photoItem.forEach(e => {
+        if (currentMenuItem === 'shaw all') {
+            e.style.display = '';
+        } else if (e.getAttribute('category') === currentMenuItem) {
+            e.style.display = '';
+        } else {
+            e.style.display = 'none';
+        }
+    })
 }
 
 class NavBar extends React.Component {

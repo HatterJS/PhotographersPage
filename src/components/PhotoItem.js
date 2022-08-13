@@ -27,7 +27,7 @@ class PhotoItem extends React.Component {
     }
     render () {
         return (
-            <div className="photoItem" onClick={this.handleUnfold}>
+            <div className="photoItem" category={this.props.itemCategory} onClick={this.handleUnfold}>
                 <div className="photoItem__Content" style={{backgroundImage: `url(${this.props.itemsImageSrc})`}}>
                     <div className="photoItem__leftArea"><div className="photoItem__leftArrow"></div></div>
                     <div className="photoItem__midArea"></div>
