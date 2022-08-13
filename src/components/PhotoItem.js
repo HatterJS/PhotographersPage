@@ -24,7 +24,6 @@ class PhotoItem extends React.Component {
             }
             e.currentTarget.classList.add('active');            
         }
-        console.log(e.currentTarget.nextSibling);  
     }
     render () {
         return (
