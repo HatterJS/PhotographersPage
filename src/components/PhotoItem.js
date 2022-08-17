@@ -37,7 +37,7 @@ class PhotoItem extends React.Component {
                 </div>
                 <div className="photoItem__Description">
                     <header>
-                        <h3 className="photoItem__text">{this.props.itemsTitle || 'no Title'}</h3>
+                        <h4 className="photoItem__text">{this.props.itemsTitle || 'no Title'}</h4>
                     </header>
                     <p  className="photoItem__text">{this.props.itemsDescription || 'no Content'}</p>
                 </div>

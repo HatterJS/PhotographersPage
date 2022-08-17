@@ -13,7 +13,7 @@ nav {
 }
 
 .mailLink {
-  color: yellow;
+  color: rgb(150, 142, 31);
 }
 .mailLink:hover {
   cursor: pointer;

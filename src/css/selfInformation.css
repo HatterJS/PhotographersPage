@@ -1,21 +1,60 @@
-.selfInformation {
+.header {
     display: flex;
-    margin: 10px;
+    justify-content: space-between;
 }
-.avatarImage {
-    border-radius: 50%;
+.selfInformation-left, .selfInformation-right {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    margin: 10px 10px 0px 10px;
+    background: linear-gradient(rgb(210, 210, 210), 5%, white 50%);
+    border-radius: 80px 80px 80px 0px;
+    transition: all 0.5s ease-in-out;
+}
+.selfInformation-right {
+    justify-content: flex-end;
+    border-radius: 80px 80px 0px 80px;
+}
+.avatarImage-left, .avatarImage-right {
+    border-radius: 50% 50% 50% 0;
     border: 3px solid white;
     overflow: hidden;
     height: 150px;
     width: 150px;
+    cursor: pointer;
+}
+.avatarImage-right {
+    border-radius: 50% 50% 0% 50%;
 }
 .avatarImage-sign {
     text-align: center;
 }
-
-.selfInformation__description {
-    margin: 0 20px;
+.selfInformation__description-left, .selfInformation__description-right {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 10px;
+    opacity: 0;
+    transition: all 0.7s ease-in-out 0.3s;
+}
+.selfInformation__description-right {
+    text-align: end;
 }
 .selfInformation__statistics {
     text-align: end;
+    display: none;
+}
+h3 {
+    font-size: 25px;
+}
+
+.activeInformation {
+    width: 100%;
+}
+.activeInformation .selfInformation__description-left {
+    opacity: 100%;
+}
+.activeInformation .selfInformation__description-right {
+    opacity: 100%;
 }

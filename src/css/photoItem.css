@@ -10,6 +10,7 @@
     height: 200px;
     flex-grow: 1;
     margin: 10px;
+    cursor: pointer;
 }
 .photoItem__Content {
     display: flex;
@@ -17,7 +18,7 @@
     position: relative;
     border: 3px solid white;
     border-radius: 20px 20px 0px 0px;
-    background: grey no-repeat left/250%;
+    background: grey no-repeat left -50px top/200%;
     height: 100%;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
@@ -70,7 +71,7 @@
 }
 .photoItem__Description {
     background-color: white;
-    height: 50px;
+    height: 60px;
     border-radius: 0px 0px 20px 20px;
     overflow: hidden;
     border: 3px solid white;
