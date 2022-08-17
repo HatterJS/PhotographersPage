@@ -68,7 +68,6 @@ class NavBar extends React.Component {
                 <header>
                     <nav className="navBar">
                         <div className="navBar__logo"><a href="/" rel=""><h3>Mr.Hatter</h3></a></div>
-                        {/* {console.log(this.state.itemList)} */}
                         <ul>
                             <li><div className="menuTitle">Sort</div >
                                 <ul onClick={this.handleSort}>

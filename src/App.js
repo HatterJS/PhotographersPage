@@ -1,8 +1,7 @@
 import './App.css';
-// import PhotoItem from './components/PhotoItem';
 import SelfInformation from './components/SelfInformation';
 import NavBar from './components/NavBar';
-// import itemList from './components/itemList';
+import {ReactComponent as ArrowTop} from './img/ico/up-arrow.svg'
 
 function App() {
   return (
@@ -12,22 +11,24 @@ function App() {
         <NavBar />
       </header>
       <main>
-        {/* <div className='galleryBlock'>
-          {itemList.map(item =>
-            <PhotoItem 
-              key={item.title} 
-              itemsTitle = {item.title} 
-              itemsDescription = {item.description} 
-              itemsImageSrc = {item.image} 
-              itemCategory = {item.category} 
-              itemRating = {item.rating} 
-              itemDate = {item.date}
-            />)
-          }
-        </div> */}
+        <div id="scrollTop" onClick={scrollTop} style={{opacity: '0%'}}>
+          <ArrowTop id='arrowTop'/>
+        </div>
       </main>
     </div>
   );
+}
+
+window.onscroll = () => {
+  const scrollTop = document.getElementById('scrollTop');
+  if (window.scrollY > 500) {
+    scrollTop.style.opacity = '100%';
+  } else {
+    scrollTop.style.opacity = '0%';
+  }
+}
+function scrollTop() {
+  window.scrollTo(0, 0);
 }
 
 export default App;

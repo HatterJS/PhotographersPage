@@ -148,3 +148,8 @@
         background-size: 100%;
     }
 }
+@media (max-width: 900px) {
+    .active {
+        height: 390px;
+    }
+}
